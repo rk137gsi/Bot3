@@ -470,7 +470,7 @@ public class ErfanGSIs extends Command {
                 if (weDontNeedAria2Logs) {
                     fullLogs.append("\n").append(line);
                     bot.editMessage(fullLogs.toString(), update, id);
-                    if (line.contains("GSI done on:")) {
+                    if (line.contains("GSI done!")) {
                         success = true;
                     }
                 }
@@ -538,7 +538,7 @@ public class ErfanGSIs extends Command {
                 /*
                  * Now say the bot will upload files to SourceForge
                  */
-                fullLogs.append("\n").append("<code>Sending files to SF...</code>");
+                fullLogs.append("\n").append("<code>Uploading to SF...</code>");
                 bot.editMessage(fullLogs.toString(), update, id);
 
                 /*
@@ -574,7 +574,7 @@ public class ErfanGSIs extends Command {
                     List<InlineKeyboardButton> rowInline2 = new ArrayList<>();
                     InlineKeyboardButton inlineKeyboardButton = new InlineKeyboardButton();
                     inlineKeyboardButton.setText("Aonly Download");
-                    inlineKeyboardButton.setUrl("https://sourceforge.net/projects/" + SourceForgeSetup.getSfConf("bot-sf-proj") + "/files/" + re + aonly);
+                    inlineKeyboardButton.setUrl("https://sourceforge.net/projects/gsis137/files/GSI" + re + aonly);
                     rowInline2.add(inlineKeyboardButton);
                     rowsInline.add(rowInline2);
                 }
@@ -583,7 +583,7 @@ public class ErfanGSIs extends Command {
                     List<InlineKeyboardButton> rowInline = new ArrayList<>();
                     InlineKeyboardButton inlineKeyboardButton = new InlineKeyboardButton();
                     inlineKeyboardButton.setText("A/B Download");
-                    inlineKeyboardButton.setUrl("https://sourceforge.net/projects/" + SourceForgeSetup.getSfConf("bot-sf-proj") + "/files/" + re + ab);
+                    inlineKeyboardButton.setUrl("https://sourceforge.net/projects/gsis137/files/GSI" + re + ab);
                     rowInline.add(inlineKeyboardButton);
                     rowsInline.add(rowInline);
                 }
@@ -592,7 +592,7 @@ public class ErfanGSIs extends Command {
                     List<InlineKeyboardButton> rowInline = new ArrayList<>();
                     InlineKeyboardButton inlineKeyboardButton = new InlineKeyboardButton();
                     inlineKeyboardButton.setText("Vendor Overlays Download");
-                    inlineKeyboardButton.setUrl("https://sourceforge.net/projects/" + SourceForgeSetup.getSfConf("bot-sf-proj") + "/files/" + re + vendorOverlays);
+                    inlineKeyboardButton.setUrl("https://sourceforge.net/projects/gsis137/files/GSI" + re + vendorOverlays);
                     rowInline.add(inlineKeyboardButton);
                     rowsInline.add(rowInline);
                 }
@@ -601,7 +601,7 @@ public class ErfanGSIs extends Command {
                     List<InlineKeyboardButton> rowInline = new ArrayList<>();
                     InlineKeyboardButton inlineKeyboardButton = new InlineKeyboardButton();
                     inlineKeyboardButton.setText("ODM Overlays Download");
-                    inlineKeyboardButton.setUrl("https://sourceforge.net/projects/" + SourceForgeSetup.getSfConf("bot-sf-proj") + "/files/" + re + odmOverlays);
+                    inlineKeyboardButton.setUrl("https://sourceforge.net/projects/gsis137/files/GSI" + re + odmOverlays);
                     rowInline.add(inlineKeyboardButton);
                     rowsInline.add(rowInline);
                 }
@@ -625,17 +625,17 @@ public class ErfanGSIs extends Command {
                 /*
                  * Send GSI message
                  */
-                sendMessage.setText("<b>Requested " + gsiCmdObj.getGsi() + " GSI</b>"
+                sendMessage.setText("<b>" + gsiCmdObj.getGsi() + " GSI</b>"
                         + "\n<b>From</b> " + getModelOfOutput()
-                        + "\n<b>Built by</b> <a href=\"" + "tg://user?id=" + builderID + "\">" + builder + "</a>"
                         + "\n\n<b>Information</b>\n<code>" + descGSI
                         + "</code>\n\n"
                         + noticeGSI
-                        + "<b>Credits</b>" + "\n"
+                        + "<b>✵ RK137 GSI ✵</b>" + "\n"
+                        + "<a href=\"https://t.me/rk137gsi\">GSI Channel</a> | <a href=\"https://t.me/oemportingchannel\">Port Channel</a> | <a href=\"https://sourceforge.net/projects/gsis137/files/GSI\">SF Folder</a>"
+                        + "\n\n<b>Credits :</b>" + "\n"
                         + "<a href=\"https://github.com/Erfanoabdi\">Erfan Abdi</a>" + " | "
-                        + "<a href=\"https://github.com/TrebleExperience/Bot3\">Bo³+t</a>" + "\n\n"
-                        + "<b>Treble Experience</b>" + "\n"
-                        + "<a href=\"https://t.me/TrebleExperience\">Channel</a> | <a href=\"https://t.me/TrebleExperience_chat\">Chat</a> | <a href=\"https://github.com/TrebleExperience\">GitHub</a>"
+                        + "<a href=\"https://github.com/TrebleExperience/Bot3\">Bo³+t</a>" + " | "
+                        + "<a href=\"https://t.me/Velosh\">Velosh</a>"                    
                 );
                 sendMessage.setChatId(Objects.requireNonNull(SourceForgeSetup.getSfConf("bot-announcement-id")));
                 idGSI = bot.sendMessageAsyncBase(sendMessage, update);
