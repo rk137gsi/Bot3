@@ -72,7 +72,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                     "CREATE TABLE IF NOT EXISTS chat_prefs ("
                             + "group_id real UNIQUE PRIMARY KEY,"
                             + "able_to_send_random_messages real DEFAULT 1,"
-                            + "hotkey text DEFAULT '!',"
+                            + "hotkey text DEFAULT '/',"
                             + "lang text DEFAULT 'strings-en.xml'"
                             + ");"
             );
