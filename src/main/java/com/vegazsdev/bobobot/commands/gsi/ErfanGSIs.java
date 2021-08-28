@@ -470,7 +470,7 @@ public class ErfanGSIs extends Command {
                 if (weDontNeedAria2Logs) {
                     fullLogs.append("\n").append(line);
                     bot.editMessage(fullLogs.toString(), update, id);
-                    if (line.contains("GSI done!")) {
+                    if (line.contains("GSI done")) {
                         success = true;
                     }
                 }
