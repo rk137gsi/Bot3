@@ -631,7 +631,7 @@ public class ErfanGSIs extends Command {
                         + "</code>\n\n"
                         + noticeGSI
                         + "<b>✵ RK137 GSI ✵</b>" + "\n"
-                        + "<a href=\"https://t.me/rk137gsi\">GSI Channel</a> | <a href=\"https://t.me/oemportingchannel\">Port Channel</a> | <a href=\"https://sourceforge.net/projects/gsis137/files/GSI\">SF Folder</a>"
+                        + "<a href=\"https://t.me/rk137gsi\">GSI Channel</a> | <a href=\"https://t.me/oemgsichannel\">Port Channel</a> | <a href=\"https://sourceforge.net/projects/gsis137/files/GSI\">SF Folder</a>"
                         + "\n\n<b>Credits :</b>" + "\n"
                         + "<a href=\"https://github.com/Erfanoabdi\">Erfan Abdi</a>" + " | "
                         + "<a href=\"https://github.com/TrebleExperience/Bot3\">Bo³+t</a>" + " | "
